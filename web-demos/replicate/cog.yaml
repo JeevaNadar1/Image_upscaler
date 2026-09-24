@@ -1,0 +1,30 @@
+"""
+This file is used for deploying replicate demo:
+https://replicate.com/sczhou/codeformer
+"""
+
+build:
+  gpu: true
+  cuda: "12.1"
+  python_version: "3.11"
+  system_packages:
+    - "libgl1"
+    - "libglib2.0-0"
+    - "ffmpeg"
+  python_packages:
+    - "torch==2.4.1"
+    - "torchvision==0.19.1"
+    - "addict==2.4.0"
+    - "ffmpeg-python==0.2.0"
+    - "lmdb==1.4.1"
+    - "scikit-image==0.24.0"
+    - "scipy==1.13.1"
+    - "gdown==5.2.0"
+    - "pyyaml==6.0.2"
+    - "tqdm==4.66.5"
+    - "lpips==0.1.4"
+    - "Pillow==10.4.0"
+    - "opencv-python-headless==4.10.0.84"
+    - "packaging==24.1"
+
+predict: "predict.py:Predictor"
